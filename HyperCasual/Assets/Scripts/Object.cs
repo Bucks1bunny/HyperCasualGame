@@ -3,6 +3,13 @@ using DG.Tweening;
 
 public class Object : MonoBehaviour, IUpdateable
 {
+    [field: SerializeField]
+    public Color objectColor
+    {
+        get;
+        private set;
+    }
+
     [SerializeField]
     private string _tag;
     private Rigidbody rb;

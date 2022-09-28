@@ -63,12 +63,6 @@ public class ObjectPool : MonoBehaviour
         objectToPool.transform.position = position;
         objectToPool.transform.rotation = rotation;
 
-        //IPooledObject obj = objectToPool.GetComponent<IPooledObject>();
-        //if (obj != null)
-        //{
-        //    obj.OnObjectSpawn();
-        //}
-
         poolDict[tag].Enqueue(objectToPool);
 
         return objectToPool;

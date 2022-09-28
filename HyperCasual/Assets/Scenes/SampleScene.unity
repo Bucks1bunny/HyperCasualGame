@@ -944,7 +944,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 161675063}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2091640355}
+        m_TargetAssemblyTypeName: Blender, Assembly-CSharp
+        m_MethodName: MixColors
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &161675063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,7 +964,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161675060}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -965,8 +977,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2911,7 +2923,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &660844145
 MonoBehaviour:
@@ -4599,7 +4611,7 @@ Transform:
   - {fileID: 410087041}
   - {fileID: 679792040}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &830427256
 PrefabInstance:
@@ -4699,7 +4711,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &846966850
 GameObject:
@@ -7140,6 +7152,8 @@ MonoBehaviour:
   <objectsTag>k__BackingField:
   - Apple
   - Banana
+  sampleColor: {r: 0.6509804, g: 0.64705884, b: 0.16862746, a: 1}
+  blender: {fileID: 2091640355}
   positions:
   - {fileID: 1135913740}
   - {fileID: 1597512754}
@@ -8886,7 +8900,7 @@ Transform:
   - {fileID: 1572714964}
   - {fileID: 846966851}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1889045163 stripped
 Transform:
@@ -9511,12 +9525,43 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8b0a463281755ef4487381aff7b669d2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8633d1fc084eee24383e522b8b29e723, type: 3}
+--- !u!1 &2091640348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4707986856079145235, guid: 9f2ef388a11065f48b373b031f50fbbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4706314558454567612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2091640353 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4701964891495245979, guid: 9f2ef388a11065f48b373b031f50fbbc,
     type: 3}
   m_PrefabInstance: {fileID: 4706314558454567612}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2091640354
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091640348}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15, y: 0.3, z: 0.15}
+  m_Center: {x: 0, y: 0.3, z: 0}
+--- !u!114 &2091640355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091640348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2320f7614f7645e4faa9c687cdd47551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2107427918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9808,7 +9853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6509434, g: 0.6461006, b: 0.16887684, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9899,7 +9944,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2654226527573559030
 MeshRenderer:
