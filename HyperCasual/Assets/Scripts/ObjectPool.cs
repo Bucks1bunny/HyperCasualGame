@@ -14,6 +14,11 @@ public class ObjectPool : MonoBehaviour
     }
 
     public static ObjectPool Instance;
+    public GameManager GameManager
+    {
+        get;
+        set;
+    }
     public List<Pool> pools = new List<Pool>();
 
     private Dictionary<string, Queue<GameObject>> poolDict = new Dictionary<string, Queue<GameObject>>();
@@ -27,6 +32,10 @@ public class ObjectPool : MonoBehaviour
     {
         foreach (var pool in pools)
         {
+            if (!GameManager.objectsTag.Contains(pool.tag))
+            {
+                continue;
+            }
             Queue<GameObject> objectPool = new Queue<GameObject>();
 
             for (int i = 0; i < pool.size; i++)
@@ -48,14 +57,20 @@ public class ObjectPool : MonoBehaviour
             return null;
         }
 
-        GameObject obj = poolDict[tag].Dequeue();
+        GameObject objectToPool = poolDict[tag].Dequeue();
 
-        obj.SetActive(true);
-        obj.transform.position = position;
-        obj.transform.rotation = rotation;
+        objectToPool.SetActive(true);
+        objectToPool.transform.position = position;
+        objectToPool.transform.rotation = rotation;
 
-        poolDict[tag].Enqueue(obj);
+        //IPooledObject obj = objectToPool.GetComponent<IPooledObject>();
+        //if (obj != null)
+        //{
+        //    obj.OnObjectSpawn();
+        //}
 
-        return obj;
+        poolDict[tag].Enqueue(objectToPool);
+
+        return objectToPool;
     }
 }
