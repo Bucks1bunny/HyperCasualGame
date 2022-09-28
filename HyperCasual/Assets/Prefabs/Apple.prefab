@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: -2308929590265110991}
   - component: {fileID: 4672663945449212137}
   - component: {fileID: 7541762418583961343}
-  - component: {fileID: -5116081364882159252}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -65,9 +64,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7211448773848044386, guid: a824244881b890f49b6e98cedd6edd79, type: 3}
-  - {fileID: -2609809028551464901, guid: a824244881b890f49b6e98cedd6edd79, type: 3}
-  - {fileID: 1151844921754575795, guid: a824244881b890f49b6e98cedd6edd79, type: 3}
+  - {fileID: 2100000, guid: 0af1a6fc642e13e40a7a860471985359, type: 2}
+  - {fileID: 2100000, guid: da44c7eb1ef153d4ca7cb51f4241acfc, type: 2}
+  - {fileID: 2100000, guid: dc3e04fcaac7024498a98cd7f174efa0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,18 +130,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!111 &-5116081364882159252
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2744599149829020699}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0

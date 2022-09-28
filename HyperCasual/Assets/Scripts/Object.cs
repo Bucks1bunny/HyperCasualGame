@@ -7,7 +7,7 @@ public class Object : MonoBehaviour, IUpdateable
     private string _tag;
     private Rigidbody rb;
     private Vector3 startPosition;
-    private Vector3 destination = new Vector3(-6.87f, 1.413f, -1.62f);
+    private Vector3 destination = new Vector3(-6.6f, 1.413f, -2.5f);
 
     public void Tick()
     {
@@ -31,9 +31,9 @@ public class Object : MonoBehaviour, IUpdateable
     {
         startPosition = transform.position;
 
-        transform.DOMoveY(1.3f, 1f).OnComplete(() => transform.DOMove(destination, 2f).SetEase(Ease.OutSine));
-        transform.DORotate(new Vector3(90, 0, 0), 3f);
-        transform.DOScale(transform.localScale / 1.75f, 2.5f);
+        transform.DOMoveY(1.3f, 1f).OnComplete(() => transform.DOMove(destination, 1f).SetEase(Ease.OutSine));
+        transform.DORotate(new Vector3(90, 0, 0), 2f);
+        transform.DOScale(transform.localScale / 1.75f, 2f);
 
         UpdateManager.RegisterLogic(this);
     }
