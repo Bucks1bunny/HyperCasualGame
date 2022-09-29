@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         objectPool = ObjectPool.Instance;
         objectPool.GameManager = this;
     }
+
     private void Start()
     {
         blender.ColorMixed += OnColorMixed;
@@ -43,14 +44,9 @@ public class GameManager : MonoBehaviour
         float a = 100 - ((rDist + gDist + bDist) * 100);
 
         Debug.Log(a);
-        //if (a >= 85)
-        //{
-        //    Debug.Log(true);
-        //}
-    }
-
-    private bool InBetween(float value)
-    {
-        return value >= -0.1 && value <= 0.1;
+        if (a >= 85)
+        {
+            Debug.Log(true);
+        }
     }
 }
