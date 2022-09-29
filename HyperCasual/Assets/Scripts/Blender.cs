@@ -31,6 +31,7 @@ public class Blender : MonoBehaviour
 
         float colorsCount = colorList.Count;
         Color newColor = new Color(totalRed / colorsCount, totalGreen / colorsCount, totalBlue / colorsCount);
+        Debug.Log(newColor);
         ColorMixed(newColor);
     }
 }
