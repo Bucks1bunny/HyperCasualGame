@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
     {
         colorPercentage.text = string.Format("{0:00}", percentage) + "%";
         endGameUI.SetActive(true);
-        if (percentage >= 85)
+        if (percentage > 84)
         {
             nextLevelButton.interactable = true;
         }
