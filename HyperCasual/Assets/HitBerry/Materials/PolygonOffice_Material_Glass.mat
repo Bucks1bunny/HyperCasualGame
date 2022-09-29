@@ -134,8 +134,8 @@ Material:
     - _DstBlend: 10
     - _EmissionChannel: 4
     - _EnvironmentReflections: 1
-    - _FresnelMax: 2
-    - _FresnelMin: 0.26
+    - _FresnelMax: 1
+    - _FresnelMin: 0.2
     - _GlossMapScale: 1
     - _Glossiness: 0.2
     - _GlossyReflections: 1
@@ -163,13 +163,13 @@ Material:
     - _RampBandsSmoothing: 0
     - _RampOffset: 0
     - _RampScale: 1
-    - _RampSmoothing: 1
-    - _RampThreshold: 0.5
+    - _RampSmoothing: 0.5
+    - _RampThreshold: 1
     - _RampType: 0
     - _ReceiveShadows: 1
     - _ReceiveShadowsOff: 1
     - _ReflectionMapType: 0
-    - _ReflectionSmoothness: 1
+    - _ReflectionSmoothness: 0.2
     - _RenderingMode: 2
     - _RimMax: 1
     - _RimMin: 0.5
@@ -179,7 +179,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpecularMapType: 0
-    - _SpecularRoughness: 0.5
+    - _SpecularRoughness: 0.818
     - _SpecularToonSize: 0.25
     - _SpecularToonSmoothness: 0.05
     - _SpecularType: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public event Action<float> ColorMixed = delegate { };
+
     [field: SerializeField]
     public List<string> objectsTag
     {
@@ -12,7 +14,7 @@ public class GameManager : MonoBehaviour
     } = new List<string>();
 
     [SerializeField]
-    private Color sampleColor;
+    private GameObject sample;
     [SerializeField]
     private Blender blender;
     [SerializeField]
@@ -27,7 +29,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        blender.ColorMixed += OnColorMixed;
+        blender.MixedButtonPressed += OnMixedButtonPressed;
+        blender.GetComponent<Animator>().SetBool("Open", true);
 
         for (int i = 0; i < objectsTag.Count; i++)
         {
@@ -35,18 +38,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void OnColorMixed(Color mixedColor)
+    private void OnMixedButtonPressed(Color mixedColor)
     {
-        var rDist = Math.Abs(mixedColor.r - sampleColor.r);
-        var gDist = Math.Abs(mixedColor.g - sampleColor.g);
-        var bDist = Math.Abs(mixedColor.b - sampleColor.b);
+        Color sampleColor = sample.GetComponent<Renderer>().material.GetColor("_Main_Color");
+        var mixR = Math.Abs(mixedColor.r - sampleColor.r);
+        var mixG = Math.Abs(mixedColor.g - sampleColor.g);
+        var mixB = Math.Abs(mixedColor.b - sampleColor.b);
 
-        float a = 100 - ((rDist + gDist + bDist) * 100);
+        float percentage = 100 - ((mixR + mixG + mixB) * 100);
 
-        Debug.Log(a);
-        if (a >= 85)
-        {
-            Debug.Log(true);
-        }
+        ColorMixed(percentage);
     }
 }

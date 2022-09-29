@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1081d22e83771f844a47161142506c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <objectColor>k__BackingField: {r: 0.26666668, g: 0.77254903, b: 0.41568628, a: 1}
+  <objectColor>k__BackingField: {r: 0.29803923, g: 0.62352943, b: 0.24313726, a: 1}
   _tag: Apple
 --- !u!135 &4672663945449212137
 SphereCollider:
