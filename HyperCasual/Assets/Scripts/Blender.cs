@@ -54,6 +54,7 @@ public class Blender : MonoBehaviour
         float fill = 0f;
         DOTween.To(() => fill, x => fill = x, 0.6f, 5f).OnUpdate(() =>
         liquidRenderer.material.SetFloat("_Amount", fill)).SetEase(Ease.InSine).OnComplete(() => MixedButtonPressed(newColor));
-        Debug.Log(newColor);
+
+        GameManager.isMixed = true;
     }
 }

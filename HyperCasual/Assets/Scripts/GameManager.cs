@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public event Action<float> ColorMixed = delegate { };
 
+    public static bool isMixed;
     [field: SerializeField]
     public List<string> objectsTag
     {
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         objectPool = ObjectPool.Instance;
         objectPool.GameManager = this;
+        isMixed = false;
     }
 
     private void Start()

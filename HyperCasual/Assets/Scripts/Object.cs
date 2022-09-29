@@ -26,10 +26,12 @@ public class Object : MonoBehaviour
     private void OnMouseDown()
     {
         startPosition = transform.position;
-
-        transform.DOMoveY(1.3f, 1f).OnComplete(() => transform.DOMove(destination, 1f).OnComplete(() => OnDestinationReached()));
-        transform.DORotate(new Vector3(90, 0, 0), 2f);
-        transform.DOScale(transform.localScale / 1.75f, 2f);
+        if (!GameManager.isMixed)
+        {
+            transform.DOMoveY(1.3f, 1f).OnComplete(() => transform.DOMove(destination, 1f).OnComplete(() => OnDestinationReached()));
+            transform.DORotate(new Vector3(90, 0, 0), 2f);
+            transform.DOScale(transform.localScale / 1.75f, 2f);
+        }
     }
 
     private void OnDestinationReached()
